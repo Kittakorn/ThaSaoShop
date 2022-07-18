@@ -1,5 +1,5 @@
 ## ระบบบริหารจัดการข้อมูลร้านค้าชุมชน 
- กรณีศึกษาศูนย์สาธิตการเกษตรร้านค้าชุมชนท่าเสา :film_strip: [Video](https://drive.google.com/file/d/1Rf5NO1iX-RLVLStWBgv9e79TDx-fj_Nr/view?usp=sharing) :page_facing_up: [Research Articles](https://ph01.tci-thaijo.org/index.php/jitubru/article/view/241772)
+กรณีศึกษาศูนย์สาธิตการเกษตรร้านค้าชุมชนท่าเสา ตำบลท่าเสา อำเภอไทรโยค จังหวัดกาญจนบุรี  :film_strip: [Video](https://drive.google.com/file/d/1Rf5NO1iX-RLVLStWBgv9e79TDx-fj_Nr/view?usp=sharing) :page_facing_up: [Research Articles](https://ph01.tci-thaijo.org/index.php/jitubru/article/view/241772)
 
 ## เมนู 
 #### ขายสินค้าสำหรับสมาชิกและบุคคลทั่วไป
