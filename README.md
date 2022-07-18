@@ -1,3 +1,4 @@
-### ระบบบริหารจัดการข้อมูลร้านค้าชุมชนกรณีศึกษาศูนย์ สาธิตการเกษตรร้านค้าชุมชนตำบลท่าเสา
+![image](https://user-images.githubusercontent.com/28840432/179474378-0a42d31d-f081-4468-b7c7-3dc1ae0584cd.png)
 
-[![image](https://user-images.githubusercontent.com/28840432/179473548-01ca0c95-30f8-4f69-9f3c-134dd9948fb6.png)](https://drive.google.com/file/d/1Rf5NO1iX-RLVLStWBgv9e79TDx-fj_Nr/view?usp=sharing)
+:film_strip: [Video](https://drive.google.com/file/d/1Rf5NO1iX-RLVLStWBgv9e79TDx-fj_Nr/view?usp=sharing)
+:page_facing_up: [Research Articles](https://ph01.tci-thaijo.org/index.php/jitubru/article/view/241772)
