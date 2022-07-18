@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E6BB7E8-F691-44C2-BD89-F38BFF78E20C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ThaSaoShop</RootNamespace>
+    <AssemblyName>ThaSaoShop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Kittakorn\Desktop\Deploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>Kittakorn Kraikruan</PublisherName>
+    <ApplicationRevision>21</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Shop-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageBoxManager">
+      <HintPath>..\..\..\..\Desktop\MessageBoxManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Forms\FormChartExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChartExpenses.Designer.cs">
+      <DependentUpon>FormChartExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormChartSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChartSell.Designer.cs">
+      <DependentUpon>FormChartSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormVillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormVillage.Designer.cs">
+      <DependentUpon>FormVillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProductCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProductCategory.Designer.cs">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormExpensesCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormExpensesCategory.Designer.cs">
+      <DependentUpon>FormExpensesCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMember.Designer.cs">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormExpenses.Designer.cs">
+      <DependentUpon>FormExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormManagement.Designer.cs">
+      <DependentUpon>FormManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBuy.Designer.cs">
+      <DependentUpon>FormBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormResult.Designer.cs">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMemberShare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMemberShare.Designer.cs">
+      <DependentUpon>FormMemberShare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportResult.Designer.cs">
+      <DependentUpon>UserControlReportResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportMember.Designer.cs">
+      <DependentUpon>UserControlReportMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportExpenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportExpenses.Designer.cs">
+      <DependentUpon>UserControlReportExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBestSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBestSell.Designer.cs">
+      <DependentUpon>UserControlReportBestSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBarcode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBarcode.Designer.cs">
+      <DependentUpon>UserControlReportBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportBuy.Designer.cs">
+      <DependentUpon>UserControlReportBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportSellDay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportSellDay.Designer.cs">
+      <DependentUpon>UserControlReportSellDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlReportSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlReportSell.Designer.cs">
+      <DependentUpon>UserControlReportSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlVillage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlVillage.Designer.cs">
+      <DependentUpon>UserControlVillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlProductCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlProductCategory.Designer.cs">
+      <DependentUpon>UserControlProductCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlExpenseCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlExpenseCategory.Designer.cs">
+      <DependentUpon>UserControlExpenseCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlExpense.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlExpense.Designer.cs">
+      <DependentUpon>UserControlExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlBuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlBuy.Designer.cs">
+      <DependentUpon>UserControlBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlMember.Designer.cs">
+      <DependentUpon>UserControlMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlProduct.Designer.cs">
+      <DependentUpon>UserControlProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControlUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControlUser.Designer.cs">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DbExtension.cs" />
+    <Compile Include="Helpers\PasswordHashSalt.cs" />
+    <Compile Include="Helpers\Profile.cs" />
+    <Compile Include="Helpers\SqlHelper.cs" />
+    <Compile Include="Models\Buy.cs" />
+    <Compile Include="Models\District.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\ExpenseCategory.cs" />
+    <Compile Include="Models\HashSalt.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\Sell.cs" />
+    <Compile Include="Models\Share.cs" />
+    <Compile Include="Models\StoredProcedure\SPResultShare.cs" />
+    <Compile Include="Models\StoredProcedure\SPExpenses.cs" />
+    <Compile Include="Models\StoredProcedure\SPResultMemberBuy.cs" />
+    <Compile Include="Models\StoredProcedure\SPResultMonth.cs" />
+    <Compile Include="Models\StoredProcedure\SPBestSell.cs" />
+    <Compile Include="Models\StoreEntities.cs" />
+    <Compile Include="Models\SubDistrict.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\View\ViewMember.cs" />
+    <Compile Include="Models\View\ViewOrder.cs" />
+    <Compile Include="Models\View\ViewSell.cs" />
+    <Compile Include="Models\Village.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormChartExpenses.resx">
+      <DependentUpon>FormChartExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormChartSell.resx">
+      <DependentUpon>FormChartSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormVillage.resx">
+      <DependentUpon>FormVillage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProductCategory.resx">
+      <DependentUpon>FormProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormExpensesCategory.resx">
+      <DependentUpon>FormExpensesCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMember.resx">
+      <DependentUpon>FormMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormExpenses.resx">
+      <DependentUpon>FormExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormManagement.resx">
+      <DependentUpon>FormManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBuy.resx">
+      <DependentUpon>FormBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReSult.resx">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMemberShare.resx">
+      <DependentUpon>FormMemberShare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportResult.resx">
+      <DependentUpon>UserControlReportResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportMember.resx">
+      <DependentUpon>UserControlReportMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportExpenses.resx">
+      <DependentUpon>UserControlReportExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportBestSell.resx">
+      <DependentUpon>UserControlReportBestSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportBarcode.resx">
+      <DependentUpon>UserControlReportBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportBuy.resx">
+      <DependentUpon>UserControlReportBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportSellDay.resx">
+      <DependentUpon>UserControlReportSellDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlReportSell.resx">
+      <DependentUpon>UserControlReportSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlVillage.resx">
+      <DependentUpon>UserControlVillage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlProductCategory.resx">
+      <DependentUpon>UserControlProductCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlExpenseCategory.resx">
+      <DependentUpon>UserControlExpenseCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlExpense.resx">
+      <DependentUpon>UserControlExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlBuy.resx">
+      <DependentUpon>UserControlBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlMember.resx">
+      <DependentUpon>UserControlMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlProduct.resx">
+      <DependentUpon>UserControlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControlUser.resx">
+      <DependentUpon>UserControlUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\BarcodePrintTemplate.xlsx" />
+    <None Include="Resources\BarcodeTemplate.xlsx" />
+    <None Include="Resources\BestSellTemplate.xlsx" />
+    <None Include="Resources\MemberTemplate.xlsx" />
+    <None Include="Resources\ResultTemplate.xlsx" />
+    <None Include="Resources\SellDayTemplate.xlsx" />
+    <None Include="Resources\ทดสอบ.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference_48px.png" />
+    <None Include="Resources\right_button.png" />
+    <None Include="Resources\prev.png" />
+    <None Include="Resources\denied.png" />
+    <None Include="Resources\stack_of_money.png" />
+    <None Include="Resources\trash_button.png" />
+    <None Include="Resources\refund.png" />
+    <None Include="Resources\get_cash.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\barcode3.png" />
+    <None Include="Resources\barcode2.png" />
+    <None Include="Resources\barcode1.png" />
+    <None Include="Resources\barcode.png" />
+    <None Include="Resources\product_button.png" />
+    <None Include="Resources\find_user_male.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\wallet.png" />
+    <None Include="Resources\general_ledger.png" />
+    <None Include="Resources\trolley.png" />
+    <None Include="Resources\tags.png" />
+    <None Include="Resources\buy.png" />
+    <None Include="Resources\village.png" />
+    <None Include="Resources\user_accout.png" />
+    <None Include="Resources\conference.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\btn-goback.png" />
+    <None Include="Resources\nav-checkmark1.png" />
+    <None Include="Resources\nav-checkmark.png" />
+    <None Include="Resources\nav-search1.png" />
+    <None Include="Resources\nav-search.png" />
+    <None Include="Resources\nav-unavailable.png" />
+    <None Include="Resources\nav-share1.png" />
+    <None Include="Resources\nav-share.png" />
+    <None Include="Resources\nav-edit.png" />
+    <None Include="Resources\nav-add.png" />
+    <None Include="Resources\nav-synchroniz1.png" />
+    <None Include="Resources\nav-synchroniz.png" />
+    <None Include="Resources\nav-product.png" />
+    <None Include="Resources\nav-member2.png" />
+    <None Include="Resources\nav-member1.png" />
+    <None Include="Resources\nav-member.png" />
+    <None Include="Resources\nav-shutdown4.png" />
+    <None Include="Resources\footer-clock.png" />
+    <None Include="Resources\footer-user1.png" />
+    <None Include="Resources\footer-user.png" />
+    <None Include="Resources\nav-shoppingcart.png" />
+    <None Include="Resources\nav-signout.png" />
+    <None Include="Resources\nav-increase.png" />
+    <None Include="Resources\nav-document.png" />
+    <None Include="Resources\nav-minimize.png" />
+    <None Include="Resources\nav-shutdown3.png" />
+    <None Include="Resources\nav-shutdown2.png" />
+    <None Include="Resources\nav-shutdown.png" />
+    <None Include="Resources\nav-shutdown1.png" />
+    <None Include="Resources\nav-shutdown.bmp" />
+    <None Include="Resources\nav-home1.png" />
+    <None Include="Resources\nav-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_down_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_card_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_user_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_property_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_barcode_26px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_70px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiply_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_arrow_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_groups_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_account_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general_ledger_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price_tag_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pricing_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_file_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_file_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user_male_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denied_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\increase_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_groups_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_payment_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\land_sales_50px.png" />
+    <Content Include="Shop-icon.ico" />
+    <Content Include="store-icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
